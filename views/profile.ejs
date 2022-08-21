@@ -1,0 +1,41 @@
+
+  <%- include('./include/header.ejs'); %>
+
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-4">
+        <div class="card">
+          <div class="avatar-ctn text-center">
+            <img src="/avatar.png" class="avatar" alt="user profile picture"/>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center">  <%= user[0].name %> <h5>
+            <a href="#" class="btn btn-primary text-center"> <%= user[0].email %></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-8">
+        <div class="card text-center">
+          <div class="card-header">
+            Profile Page
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Hey <%= user[0].name %> welcome back</h5>
+            <p class="card-text">This is your profile page where you can add all the information about yourself</p>
+            <form id='editProfile', action='/profile/' + customer.ID  method='GET')>
+            <a href="/edit/<%= user[0].ID %>" class="btn btn-primary">Edit</a>
+            </form>
+          </div>
+          <div class="card-footer text-muted">
+            Node MySQL - Project
+          
+    </div>
+    </div>
+    </div>
+    </div>
+<!--  -->
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+</body>
+</html>
